@@ -26,9 +26,13 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
-    <%= link_to root_path, class: "navbar-item" do %>
+    <%
+=begin%>
+ <%= link_to root_path, class: "navbar-item" do %>
       <h6 class="title is-4" style="font-family: cursive;">TOP</h6>
-    <% end %>
+    <% end %> 
+<%
+=end%>
 
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, data: {turbo_method: :delete }, 
